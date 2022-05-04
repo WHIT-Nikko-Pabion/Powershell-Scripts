@@ -1,0 +1,34 @@
+{
+ "properties": {
+  "displayName": "Wheelhouse IT Defaults",
+  "policyType": "Custom",
+  "metadata": {
+   "category": "Wheelhouse IT",
+   "version": "0.0.1",
+   "createdBy": "22c56abf-b4f0-4a4a-b3d0-c5743a726d87",
+   "createdOn": "2021-08-11T17:15:19.8877109Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "parameters": {},
+  "policyDefinitions": [
+   {
+    "policyDefinitionReferenceId": "Ports to block_1",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/7b80db37-11b2-4046-b65a-d1a4cf738372/providers/Microsoft.Authorization/policyDefinitions/3ec353c9-dbe5-423e-ad52-a3531d2a7a3f",
+    "parameters": {
+     "deniedPorts": {
+      "value": [
+       "3389",
+       "22"
+      ]
+     }
+    },
+    "groupNames": []
+   }
+  ],
+  "policyDefinitionGroups": []
+ },
+ "id": "/subscriptions/4ddb4ae6-3c11-4655-9f9d-4e495c42c731/providers/Microsoft.Authorization/policySetDefinitions/120e8da94c4448ca93636ef3",
+ "type": "Microsoft.Authorization/policySetDefinitions",
+ "name": "120e8da94c4448ca93636ef3"
+}

@@ -1,0 +1,25 @@
+{
+ "sku": {
+  "name": "A0",
+  "tier": "Free"
+ },
+ "properties": {
+  "displayName": "Wheelhouse IT Defaults",
+  "policyDefinitionId": "/subscriptions/4ddb4ae6-3c11-4655-9f9d-4e495c42c731/providers/Microsoft.Authorization/policySetDefinitions/120e8da94c4448ca93636ef3",
+  "scope": "/subscriptions/4ddb4ae6-3c11-4655-9f9d-4e495c42c731",
+  "notScopes": [],
+  "parameters": {},
+  "metadata": {
+   "assignedBy": "Nikko Pabion",
+   "parameterScopes": {},
+   "createdBy": "22c56abf-b4f0-4a4a-b3d0-c5743a726d87",
+   "createdOn": "2021-08-11T17:19:14.6945088Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "enforcementMode": "Default"
+ },
+ "id": "/subscriptions/4ddb4ae6-3c11-4655-9f9d-4e495c42c731/providers/Microsoft.Authorization/policyAssignments/95439a53d490476ea96193f3",
+ "type": "Microsoft.Authorization/policyAssignments",
+ "name": "95439a53d490476ea96193f3"
+}
