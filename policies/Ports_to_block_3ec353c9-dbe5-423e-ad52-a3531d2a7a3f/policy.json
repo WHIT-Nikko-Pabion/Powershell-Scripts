@@ -1,0 +1,76 @@
+{
+ "properties": {
+  "displayName": "Ports to block",
+  "policyType": "Custom",
+  "mode": "All",
+  "description": "The inbound ports that should be blocked",
+  "metadata": {
+   "createdBy": "22c56abf-b4f0-4a4a-b3d0-c5743a726d87",
+   "createdOn": "2021-07-02T19:46:33.8394752Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "parameters": {
+   "deniedPorts": {
+    "type": "Array",
+    "metadata": {
+     "displayName": "Ports to block",
+     "description": "The inbound ports that should be blocked"
+    }
+   }
+  },
+  "policyRule": {
+   "if": {
+    "allOf": [
+     {
+      "field": "type",
+      "equals": "Microsoft.Network/networkSecurityGroups/securityRules"
+     },
+     {
+      "allOf": [
+       {
+        "field": "Microsoft.Network/networkSecurityGroups/securityRules/access",
+        "equals": "Allow"
+       },
+       {
+        "field": "Microsoft.Network/networkSecurityGroups/securityRules/direction",
+        "equals": "Inbound"
+       },
+       {
+        "anyOf": [
+         {
+          "field": "Microsoft.Network/networkSecurityGroups/securityRules/destinationPortRange",
+          "in": "[parameters('deniedPorts')]"
+         },
+         {
+          "not": {
+           "field": "Microsoft.Network/networkSecurityGroups/securityRules/destinationPortRanges[*]",
+           "notIn": "[parameters('deniedPorts')]"
+          }
+         }
+        ]
+       },
+       {
+        "anyOf": [
+         {
+          "field": "Microsoft.Network/networkSecurityGroups/securityRules/sourceAddressPrefix",
+          "in": [
+           "*",
+           "Internet"
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "then": {
+    "effect": "deny"
+   }
+  }
+ },
+ "id": "/providers/Microsoft.Management/managementGroups/7b80db37-11b2-4046-b65a-d1a4cf738372/providers/Microsoft.Authorization/policyDefinitions/3ec353c9-dbe5-423e-ad52-a3531d2a7a3f",
+ "type": "Microsoft.Authorization/policyDefinitions",
+ "name": "3ec353c9-dbe5-423e-ad52-a3531d2a7a3f"
+}

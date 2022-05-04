@@ -1,0 +1,38 @@
+{
+ "sku": {
+  "name": "A0",
+  "tier": "Free"
+ },
+ "identity": {
+  "principalId": "b695b7cf-4b92-4ead-bbb7-31f74adfc823",
+  "tenantId": "7b80db37-11b2-4046-b65a-d1a4cf738372",
+  "type": "SystemAssigned"
+ },
+ "properties": {
+  "displayName": "Block internet facing port 3389",
+  "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/7b80db37-11b2-4046-b65a-d1a4cf738372/providers/Microsoft.Authorization/policyDefinitions/3ec353c9-dbe5-423e-ad52-a3531d2a7a3f",
+  "scope": "/providers/Microsoft.Management/managementGroups/7b80db37-11b2-4046-b65a-d1a4cf738372",
+  "notScopes": [],
+  "parameters": {
+   "deniedPorts": {
+    "value": [
+     "3389"
+    ]
+   }
+  },
+  "description": "",
+  "metadata": {
+   "assignedBy": "Nikko Pabion",
+   "parameterScopes": {},
+   "createdBy": "22c56abf-b4f0-4a4a-b3d0-c5743a726d87",
+   "createdOn": "2021-08-30T17:56:38.7547111Z",
+   "updatedBy": "22c56abf-b4f0-4a4a-b3d0-c5743a726d87",
+   "updatedOn": "2022-05-04T16:10:26.5542036Z"
+  },
+  "enforcementMode": "Default"
+ },
+ "id": "/providers/Microsoft.Management/managementGroups/7b80db37-11b2-4046-b65a-d1a4cf738372/providers/Microsoft.Authorization/policyAssignments/0fe7052b726a456cb0eb0df9",
+ "type": "Microsoft.Authorization/policyAssignments",
+ "name": "0fe7052b726a456cb0eb0df9",
+ "location": "eastus2"
+}
